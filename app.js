@@ -31,12 +31,12 @@ app.controller('MemoryController', function($scope, $timeout) {
 
     console.log('you clicked');
     if (state === 'first') {
-      tile.state = 'open';
+      tile.state = true;
       firstTile = tile;
       state = 'second';
       // console.log(state);
     } else if (state === 'second') {
-      tile.state = 'open';
+      tile.state = true;
       secondTile = tile;
       state = 'first';
       // console.log(state);
@@ -44,8 +44,8 @@ app.controller('MemoryController', function($scope, $timeout) {
         tile.matched = true;
       } else {
         $timeout(function() {
-          firstTile.state = 'closed';
-          secondTile.state = 'closed';
+          firstTile.state = false;
+          secondTile.state = false;
         }, 1000);
       }
     }
@@ -71,49 +71,49 @@ $scope.startGame = function() {
     {
       name:'tile1',
       imgURL:'monsters-01.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile2',
       imgURL:'monsters-01.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile3',
       imgURL:'monsters-02.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile4',
       imgURL:'monsters-02.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile5',
       imgURL:'monsters-03.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile6',
       imgURL:'monsters-03.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile7',
       imgURL:'monsters-04.png',
-      state:'closed',
+      state:false,
       matched: null
     },
     {
       name:'tile8',
       imgURL:'monsters-04.png',
-      state:'closed',
+      state:false,
       matched: null
     }
   ];

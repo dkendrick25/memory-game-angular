@@ -8,10 +8,10 @@
   <body ng-app="memory" ng-controller="MemoryController">
       <button ng-click="startGame()">Reset</button>
       <div class="tile" ng-click='flipTile(tile)' ng-repeat="tile in tiles">
-        <img ng-show='tile.state === "open"' ng-show='tile.matched'
+        <img ng-src="images/logo.png" ng-hide='tile.state'/>
+        <img ng-show='tile.state' ng-show='tile.matched'
         ng-src ='images/{{tile.imgURL}}'/>
       </div>
-
 
     <script src="angular.js"></script>
     <script src="app.js"></script>
