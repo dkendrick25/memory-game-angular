@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>memory game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-app="memory" ng-controller="MemoryController">
+      <button ng-click="startGame()">Reset</button>
+      <div class="tile" ng-click='flipTile(tile)' ng-repeat="tile in tiles">
+        <img ng-show='tile.state === "open"' ng-show='tile.matched'
+        ng-src ='images/{{tile.imgURL}}'/>
+      </div>
+
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
